@@ -82,17 +82,17 @@ def view_all_in_category():
     else:
         print('You must enter a valid category\n')
 
-def view_all_on_day():
-    '''This function prints all historical transactions within a user-specified day'''
-    user_choice = input('Which day do you wish to view? ')
-    transactions = json.load(open('my_current_balance.json'))
-    transactions = [transaction for transaction in transactions]
-    transaction_dates  = [transaction['time'] for transaction in transactions]
-    dates = [str(day[:10]) for day in transaction_dates]
-
-    for i in range(len(transaction_dates)):
-        if user_choice == dates[i]:
-            pprint(transactions[i])
-        else:
-            print('You must enter a date in the format MM DD YYYY')
-            break
+# def view_all_on_day():
+#     '''This function prints all historical transactions within a user-specified day'''
+#     user_choice = input('Which day do you wish to view? ')
+#     transactions = json.load(open('my_current_balance.json'))
+#     transactions = [transaction for transaction in transactions]
+#     transaction_dates  = [transaction['time'] for transaction in transactions]
+#     dates = [str(day[:10]) for day in transaction_dates]
+#     # print(dates)
+#     for i in range(len(transactions)):
+#         if user_choice == dates[i]:
+#             print(transactions[i])
+#         else:
+#             print('You must enter a date in the format MM DD YYYY')
+#             break

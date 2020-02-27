@@ -10,16 +10,15 @@ options = '''
     3) Make a deposit
     4) View past transactions
     5) View transactions by category
-    6) View transactions by day
-    7) Exit this terminal
+    6) Exit this terminal
         '''
-
+# 6) View transactions by day
 print(f'{options}')
 user_input  = input("What would you like to do? ")
 
 
 while True:
-    if user_input in ['1','2','3','4','5','6','7']:
+    if user_input in ['1','2','3','4','5','6']:
         if user_input == '1':
             funcs.view_balance()
             user_input = input(f'\nWhat would you like to do?' \
@@ -47,12 +46,12 @@ while True:
             user_input = input(f'\nWhat would you like to do?' \
                 f'\n{options}\nYour choice? ')
 
-        elif user_input == '6':
-            funcs.view_all_on_day()
-            user_input = input(f'\nWhat would you like to do?' \
-                f'\n{options}\nYour choice? ')
+        # elif user_input == '6':
+        #     funcs.view_all_on_day()
+        #     user_input = input(f'\nWhat would you like to do?' \
+        #         f'\n{options}\nYour choice? ')
 
-        elif user_input == '7':
+        elif user_input == '6':
             print('\nThank you, have a wonderful day')
             break
         
